@@ -1,0 +1,234 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="icon" href="/Img/Logo2.png" type="image/icon type" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>SpaceX Browser</title>
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container main">
+      <!-- Header -->
+      <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <!-- <a class="navbar-brand" href="#"></a> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="nav_links">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >SpaceX browser</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#map">Map</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/launches/slides.html">Slides</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                  >Launches</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/launches/slides.html#upcoming_launch"
+                      >Upcoming</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/launches/slides.html#past_launch"
+                      >Past</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- END Header -->
+
+      <!--Recent Lauch -->
+      <section id="recent" class="recent_launch">
+        <div class="star">
+          <!-- <img src="img/Starlink1.jpg" class="img-fluid star" alt="..." /> -->
+          <span class="source">
+            <a
+              href="https://www.flickr.com/photos/spacex/51027443321/"
+              target="blank"
+              >Starlink Mission From Official SpaceX</a
+            ></span
+          >
+        </div>
+
+        <!-- <div class="star"></div> -->
+        <div class="row">
+          <!-- <img src="img/Starlink.jpg" class="img-fluid star" alt="..."> -->
+          <!-- <span>Source:Flicker</span> -->
+          <div class="col">
+            <div class="recent-feature">
+              <h3 class="launch-head">Recent Launch</h3>
+              <h1 class="mission-name"></h1>
+              <button class="det-btn btn btn-dark">Details</button>
+              <div class="card launch-detail hidden">
+                <div class="card-body">
+                  <p class="details">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nisi, atque reprehenderit harum culpa quasi assumenda
+                    aperiam! Non hic unde quasi enim molestias. Officia nesciunt
+                    non est itaque accusantium, totam officiis
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End Recent Lauch section -->
+
+      <!-- Map section -->
+      <section id="map-section">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="display-2 text-center mb-5 mt-5">Map</h2>
+          </div>
+        </div>
+        <div id="map-holder">
+          <div id="map"></div>
+        </div>
+      </section>
+      <!-- END Map section -->
+
+      <!-- footer -->
+      <footer class="text-center text-white">
+        <!-- Grid container -->
+        <div class="container pt-5">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://www.facebook.com/spacenewsx/?hc_ref=ARQqTaUxpjBoJItMFxul1Ks85X-Fu-aKPIlBfZKU1n-uqJ_02tfGSKZ3nCd5CzY2BJ0&fref=nf&__xts__[0]=68.ARAhXUmgTGdbhzT9aSsPDbiMlFI9gCunto67hZybnFf8TS1qFsM3are1MxhghMZhhX9liA6mAJzGI-r3BW5C68lSWzvwrUEM1vu7RNBwbOcQe_3crIt3jkbQiYUZJJXt9a00uM-LS5nvGyV2Qy4cYxEphhSWKmgiSahM89WfQhs-jkXTFxMASE1xdFgYyyH8SDuE473Cej8n5oy6ETuoxIla7hZaPrLRsSiHh3Eemgh0FScudnZkfPmQ-Gb5_MbWHTzP4tyoTeUAyfCY754PEwzy1j6jLd966lWcDNa-lwXxHL_D8OvjqC8&__tn__=kC-R"
+              target="blank"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+
+            <!-- SpaceX -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://www.spacex.com/launches/"
+              role="button"
+              target="blank"
+              data-mdb-ripple-color="dark"
+              ><img class="elon" src="/Img/elon_musk.png"
+            /></a>
+
+            <!-- Twitter -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://twitter.com/SpaceX?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              role="button"
+              target="blank"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
+
+            <!-- flicker -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://www.flickr.com/photos/spacex/"
+              role="button"
+              target="blank"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-flickr"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://www.instagram.com/spacex/?hl=en"
+              role="button"
+              target="blank"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+
+            <!-- Github -->
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://github.com/r-spacex"
+              role="button"
+              target="blank"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-github"></i
+            ></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="copyRight text-center text-white">
+          <span>© 2021 Copyright:</span>
+          <a class="text-white com" href="#">SpaceXBrowser.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- ENF footer section -->
+    </div>
+    <!--END Container -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -7,7 +7,9 @@
 }
 body {
   width: 100%;
-  min-width: 70%;
+  /* max-width: 0%; */
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
   color: rgb(255, 255, 255);
   background-color: #000;
 }
@@ -17,34 +19,39 @@ html {
 
 /* Past Launch success Rate */
 #past_launch {
-  /* background-color: lightgray; */
-  position: relative;
-  margin-bottom: 4rem;
-  /* font-size: 4rem; */
+  margin-bottom: 2rem;
 }
 h1,
 h2 {
-  font-size: 3.5rem;
-  margin-top: 1em;
-}
-h5 {
-  color: #fff;
   font-size: 2rem;
-}
-a {
-  font-size: 1em;
-  color: #eee;
-}
-.chart-container {
-  max-width: 80vw;
-  max-height: 60vh;
-  text-align: center;
-  font-size: 2.4em;
+  margin-top: 1em;
+  text-decoration: underline rgb(160, 160, 160);
+  padding-bottom: 0.8em;
 }
 
+h5 {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+}
+a {
+  font-size: 1.5rem;
+  color: #eee;
+}
+.slide img {
+  opacity: 0.9;
+}
+.total {
+  color: rgb(155, 218, 179);
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.chart-container {
+  max-width: 65vw;
+  max-height: 40vh;
+  text-align: center;
+}
 /* Upcoming Launches */
 .timeline {
-  /* position: relative; */
   margin: 0 auto;
 }
 .upcoming-mission-name {
@@ -62,21 +69,27 @@ a {
   justify-self: center;
   align-self: center;
   margin: 0 auto;
-  width: 110px;
-  height: 110px;
-  border: 2px solid #fff;
+  width: 130px;
+  height: 130px;
+  border: 2px solid rgb(156, 226, 194);
   border-radius: 100%;
+  background-color: #000;
 }
-
+.iconDiv:hover {
+  transition: 0.1s ease-in-out;
+  border: 4px solid rgb(226, 245, 237);
+  background-color: rgb(83, 104, 95);
+}
 .fa-space-shuttle {
   font-size: 3em;
   margin: auto;
+  color: rgb(255, 255, 255);
 }
 footer {
   font-size: 1.6rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   background-color: rgb(10, 10, 10);
-  min-width: 100%;
+  max-width: 100%;
   height: 10%;
 }
 /* ICONS */
@@ -107,22 +120,24 @@ footer {
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .main {
-    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
+  h1,
+  h2 {
+    font-size: 3rem;
+    margin-top: 1em;
+  }
+
   .fab,
   .elon {
     font-size: 3.5rem;
     width: 30px;
   }
-  .iconDiv {
-    display: flex;
-    justify-self: center;
-    align-self: center;
-    margin: 0 auto;
-    width: 150px;
-    height: 150px;
-    border: 2px solid #fff;
-    border-radius: 100%;
+  .chart-container {
+    min-width: 60vw;
+    min-height: 50vh;
+    text-align: center;
   }
 
   .fa-space-shuttle {
@@ -139,9 +154,6 @@ footer {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .main {
-    min-width: 100%;
-  }
 }
 
 /* // Large devices (desktops, 992px and up) */

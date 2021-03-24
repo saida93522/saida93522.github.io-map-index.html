@@ -41,18 +41,18 @@ header {
   font-size: 1.9rem;
 }
 .nav_links a:hover {
-  color: #d7d7d7;
+  color: #64796a;
   text-decoration: underline;
-  transition: 2s ease;
+  transition: 0.3s ease-in-out;
 }
 .dropdown-menu {
   background-color: transparent;
   border: none;
 }
 .dropdown-menu li a {
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
   padding-top: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 /* resize */
 /* Recent Lauch*/
@@ -79,7 +79,24 @@ header {
   text-decoration: overline;
   color: #d7d7d7;
 }
-
+.recent-feature {
+  animation-name: recent;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+}
+@keyframes recent {
+  0% {
+    visibility: hidden;
+    /* opacity: -1; */
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #recent {
   position: relative;
   z-index: 1;
@@ -95,27 +112,9 @@ header {
   max-height: 10vh;
   color: #fff;
 }
-.recent-feature {
-  animation-name: recent;
-  animation-duration: 1s;
-  animation-delay: 0.2s;
-}
-@keyframes recent {
-  0% {
-    opacity: -1;
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  100% {
-    /* transform: ease translateX(-50%); */
-  }
-}
 
 .launch-detail {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   text-align: left;
   background-color: transparent;
   border: none;
@@ -129,14 +128,14 @@ header {
   transition: ease 0.2s;
   background-color: rgb(0, 0, 0);
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .launch-head {
-  font-size: 2ch;
+  font-size: 2.3ch;
   opacity: 0.6;
 }
 .mission-name {
-  font-size: 3ch;
+  font-size: 4ch;
   font-weight: bold;
 }
 .hidden {
@@ -166,7 +165,6 @@ header {
 #map-holder {
   max-width: 100%;
   height: 80%;
-  /* display: block; */
   margin: 0 auto;
 }
 
@@ -220,19 +218,18 @@ footer {
   }
   .nav_links li {
     text-align: center;
-    font-size: 2ch;
     text-decoration: none;
   }
   .nav_links li,
   a {
     display: inline;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
   }
 
   .navbar-toggler {
     /* display: block; */
-    font-size: 1.4em;
+    font-size: 1.7rem;
     margin-right: auto;
   }
   .navbar-toggler:hover {
@@ -246,7 +243,7 @@ footer {
   .det-btn {
     font-size: 1.7rem;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
   }
   .launch-head {
     font-size: 2.7ch;
@@ -277,11 +274,17 @@ footer {
   .nav_links li a {
     margin: 0 auto;
     padding-left: 2.3rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
+
   .mission-name {
     font-size: 3.7rem;
     text-transform: uppercase;
+  }
+  .dropdown-menu li a {
+    background-color: rgb(0, 0, 0);
+    padding-top: 0;
+    font-size: 1.7rem;
   }
 }
 

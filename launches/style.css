@@ -98,7 +98,9 @@ footer {
 .fa-github:hover {
   color: #4078c0;
 }
+.fab,
 .elon {
+  font-size: 2.5rem;
   width: 25px;
 }
 
@@ -107,8 +109,10 @@ footer {
   .main {
     max-width: 100%;
   }
-  .fab {
+  .fab,
+  .elon {
     font-size: 3.5rem;
+    width: 30px;
   }
   .iconDiv {
     display: flex;
